@@ -5,7 +5,7 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(600, 600)
+  let canvas = createCanvas(800, 600)
   
   // Handle the mouse click event
   canvas.mouseClicked(togglePlay)
@@ -31,8 +31,8 @@ function draw() {
   // Draw the frequency chart
   //sv.frequencyChart(200, 300, 200, 100);
   //sv.frequencyBars(200, 300, {numBars:20, colour:color(60, 200, 60)})
-  sv.frequencyRadial(300, 300, {radius:100, numBars:30, barWidth:10, barHeight:50, colour:color("red")})
-  sv.energyCircle(300,300, {energy:"bass", radius:150, fillColour:color("yellow"), strokeColour:color("yellow")})
+  sv.frequencyRadial(400, 300, {radius:100, numBars:30, barWidth:10, barHeight:50, colour:color("red")})
+  sv.energyCircle(400,300, {energy:"bass", radius:150, fillColour:color("yellow"), strokeColour:color("yellow")})
   
   // Lead cat
   // ---------------------------
@@ -49,7 +49,7 @@ function draw() {
   }
   
   // Draw it
-  sv.cat(300, 300, 1,
+  sv.cat(400, 300, 1,
          {mouthHeight:30 * sv.energyAll,
           tailWag:30 * sv.energyAll,
           whiskerWaveHeight:20,
@@ -71,7 +71,7 @@ function draw() {
   
   // Mid cat
   // ---------------------------
-  sv.cat(300, 80, 0.5,
+  sv.cat(400, 80, 0.5,
         {mouthHeight:30 * sv.energyMid,
         tailWag:30 * sv.energyMid,
         whiskerWaveHeight:10,
@@ -81,7 +81,7 @@ function draw() {
   // Treble cat
   // ---------------------------
   adjustment = 20*sv.energyTreble
-  sv.cat(450+adjustment, 80, 0.5, 
+  sv.cat(650+adjustment, 80, 0.5, 
         {mouthHeight:30 * sv.energyTreble,
         tailWag:30 * sv.energyTreble,
         whiskerWaveHeight:10,
